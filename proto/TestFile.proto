@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package test;
+
+option csharp_namespace = "Test.Protobuf";
+
+message TestRequest {
+  string id = 1;
+  string name = 2;
+  int32 count = 3;
+  bool enabled = 4;
+  repeated string tags = 5;
+}
+
+message TestResponse {
+  bool success = 1;
+  string message = 2;
+  TestStatus status = 3;
+}
+
+enum TestStatus {
+  TEST_STATUS_UNSPECIFIED = 0;
+  TEST_STATUS_READY = 1;
+  TEST_STATUS_RUNNING = 2;
+  TEST_STATUS_COMPLETED = 3;
+}
+
+service TestService {
+  rpc RunTest(TestRequest) returns (TestResponse);
+}
