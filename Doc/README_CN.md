@@ -1,5 +1,7 @@
 # CompileProtobufToCpp
 
+[English](../README.md) | 中文
+
 一个用于在 Windows 上批量编译 Protocol Buffers 文件的简单工具。
 
 工具会自动调用当前机器 `PATH` 中的 `protoc`，递归查找 `proto` 文件夹内的全部 `.proto` 文件，并将生成的 C++ 文件保存到 `Results` 文件夹。

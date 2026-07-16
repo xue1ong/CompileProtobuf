@@ -1,5 +1,7 @@
 # CompileProtobufToCpp
 
+English | [中文](Doc/README_CN.md)
+
 A simple tool for compiling Protocol Buffers files in batches on Windows.
 
 The tool automatically invokes `protoc` from the current machine's `PATH`, recursively finds all `.proto` files in the `proto` directory, and saves the generated C++ files to the `Results` directory.
